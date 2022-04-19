@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수</title>
+    <script>
+        //변수
+        //어떤 정보에 이름을 붙여서 저장하고 싶을 때 사용
+        /* 
+            문자 변수값은 '', ""를 사용 해야함
+            첫글자는 숫자가 될 수 없음
+            상수는 되도록 대문자 사용
+            class와 같이 자바스크립트에서 사용하고 있는 단어는 변수명 사용 불가
+        */
+
+        //var, let, const
+
+        /* 
+            let과 const는 블럭 안에서 작동함, 블럭 밖에서 호출할 수 없음.
+            하지만 블럭 밖에서 선언된 변수는 블럭 안에서 사용 가능함. 
+        */
+
+       //let 변수의 값이 재정의가 필요하다 판단될 때 사용 ex. 점수
+       //재정의가 필요할 경우 let 빼고 작성
+        let score = 0;
+        score = score +1;
+        console.log(score);
+
+        // const 변수 값이 변화되지 않을 때 사용, 대문자로 선언하는 것이 좋음.
+        const name = "hello";
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
