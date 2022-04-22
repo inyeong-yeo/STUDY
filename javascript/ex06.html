@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비교 연산자와 반복문</title>
+    <script>
+        // = 값을 할당할 때 사용하므로 동등연산자나 일치 연산자 사용
+        console.log(10 > 5);
+        console.log(10 == 5); //동등연산자
+        console.log(10 != 5); //같지 않음
+
+        const a = 1;
+        const b = "1";
+        console.log(a === b); //일치 연산자
+        //일치연산자: 타입까지 비교, 동등연산자를 쓸 경우 ture 반환
+
+        //if문
+        //조건문은 불린으로 반환, true일 때 실행
+        const age = prompt("나이를 입력하세요");
+        if(age > 19){
+            alert('환영합니다.');
+        }
+        if(age <= 19){
+            alert('안녕히 가세요');
+        }
+
+        //if else 조건이 맞지 않을 때 (if가 false일 때) 사용
+        //else if 첫번째 if는 false일 경우 실행될 또 다른 조건
+        const age1 = 31;
+        if(age1 > 19){
+            console.log('환영합니다.');
+        } else if (age1 === 19) {
+            console.log('수험생 화이팅 !!');
+        } else {
+            console.log('안녕히 가세요.');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

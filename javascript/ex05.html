@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본연산자</title>
+    <script>
+        //나머지
+        //홀수, 짝수 구할 때 사용
+        //값의 리미티드 정할 수 있음 ex 5를 넘기면 안될 경우, x% 5는 0~4 사이의 값만 반환함
+        const percent = 5%2;
+        console.log(percent);
+
+        //거듭제곱
+        const num = 2 ** 3;
+        console.log(num);
+
+        //우선순위
+        // *, / > +, -
+
+        //연산자 줄여쓰기
+        let num1 = 10;
+        // num1 = num1 + 5;
+        num1 += 5;
+
+        //증가 연산자, 감소 연산자
+        //1씩 증가 또는 감소
+
+        let num2 = 10;
+        let result = ++num2;
+        //num2++로 실행할 경우, 증가 전 값을 result에 넣음
+        //++num2일 경우 증가 후 값을 result에 넣음
+        console.log(result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

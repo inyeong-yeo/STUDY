@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논리연산자</title>
+    <script>
+        //첫번째 평가에서 걸러질 수 있도록 조건의 순서 조절 필요 -> 성능 최적화
+
+        //or
+        //여러개 중 하나라도 true일 경우 true, 모든 값이 false일 때만 false 반환
+        //첫번째 true를 발견하는 즉시 평가를 멈춤
+
+        let name = "Mike";
+        let age = 30;
+        if(name === 'Tom' || age >19) {
+            alert('통과');
+        }
+
+        //and
+        //모든 값이 true면 true, 하나라도 false면 false 반환
+        //첫번째 false를 발견하는 즉시 평가를 멈춤
+        if(name === 'Mike' && age >19) {
+            alert('통과');
+        } else {
+            alert('실패');
+        }
+
+        //not
+        //true면 false, false면 true
+        const isAge = prompt('나이가..?');
+        const isAdult = age > 19;
+        if(!isAdult){
+            alert('돌아가');
+        }
+
+        //우선순위
+        //and > or 
+        const gender = 'f';
+        const name1 = 'jane';
+        const isAdult2 = true;
+        
+        //ex 남자이고, 이름이 Mike이거나 성인이면 통과
+        
+        //if(gender === 'M' && name === 'Mike' || isAdult) {
+        //and가 or 보다 우선순위가 높기 때문에 첫번째 조건 성립 시 통과
+        
+        if(gender === 'M' && (name1 === 'Mike' || isAdult2)) {
+            alert('통과');
+        }else {
+            alert('나가');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

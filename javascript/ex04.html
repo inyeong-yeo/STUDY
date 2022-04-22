@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>형 변환</title>
+    <script>
+        const mathScore = prompt("수학 몇 점?");
+        const engScore = prompt("영어 몇 점?");
+        const result = (mathScore + engScore) / 2;
+        console.log(result);
+        //ex. 수학점수 = 80, 영어점수 =  90
+        // 8090 / 2
+        //4045
+
+        //프롬프트에 숫자 입력시 문자형으로 가져옴
+        //숫자형이 아니더라도 표현식은 숫자로 자동 변환 -> 자동 형변환
+        //의도를 가지고 원하는 타입으로 변환 -> 명시적 형변환
+        
+        //문자형
+        console.log(String(3), String(true));
+
+        //숫자형
+        console.log(Number(true), Number(false));
+        //숫자가 아닌 문자 입력시 NaN
+        //Number(null) -> 0
+        //Number(undefined) -> NaN
+
+        //boolean
+        console.log(Boolean(0), Boolean(true));
+        //0, '', null, undefined, NaN -> false, 이외 모두 true
+        //Boolean('0') , Boolean(' ') -> true
+        //Boolean(0) , Boolean('') -> false
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+    <script>
+        //한 요소를 여러 군데에서 사용할 때 사용(중복을 줄여줌), 유지보수가 쉬움
+
+        //function 함수명 (매개변수) {실행할 코드}
+        //매개변수 갯수 자유(0개 이상 가능)
+        console.log('---- 함수 실행 확인 ----');
+        function showHi() {
+            console.log('만나서 반가워요.');
+            console.log(' ');
+        }
+        
+        showHi();
+
+        
+        //전역변수 : 함수 외부 등 어디에서도 호출 가능한 변수(함수 외부에 작성해야함)
+        console.log('---- 전역변수 ----');
+
+        let msg = `hello`; //전역변수
+
+        console.log('--------------- 함수 호출 전');
+        console.log(msg);
+
+        function sayHello(name){
+            if(name){
+                msg += `, ${name}`; // += msg 내용에 name을 더해줌
+            }
+
+            console.log('---------------  함수 내부');
+            console.log(msg);
+
+        }
+
+        sayHello('Mike');
+
+        console.log('--------------- 함수 호출 후');        
+        console.log(msg);
+        console.log(' ');
+
+
+        //지역변수 : 함수 내부에서 사용하는 변수
+        console.log('---- 지역변수 ----');        
+
+        function sayHello2(name){
+            let msg2 = `Bye`; //지역변수
+
+            if(name){
+                msg += `, ${name}`; // += msg 내용에 name을 더해줌
+            }
+
+            console.log('--------------- 함수 내부');
+            console.log(msg2);
+
+        }
+
+        sayHello2('Mike');
+
+        console.log('--------------- 함수 외부');
+        //console.log(msg2);
+        console.log('not define 에러 표시');
+        console.log(' ');
+
+
+        //전역 변수와 지역변수 변수
+        //변수명이 같아도 간섭 없이 실행 됨
+        console.log('---- 같은 변수명 비교 ----');        
+        
+        let msg3 = "welcome";
+        console.log('--------------- 함수 실행 전 (전역변수)');        
+        console.log(msg3);
+
+        function sayHi(name){
+            let msg3 = "Hello"
+
+            console.log('--------------- 함수 내부 (지역변수)');        
+            console.log(msg3 + ' ' + name);
+
+        }
+
+        sayHi('Mike');
+
+        console.log('--------------- 함수 실행 후 (전역변수)');        
+        console.log(msg3);
+        console.log(' ');
+
+
+        //전역변수와 매개변수
+        //매개변수로 받은 값은 복사된 후 함수의 지역변수가 됨
+        //전체 서비스에서 공통으로 바라보는 바운스 제외 지역변수 사용 사용
+        console.log('---- 전역변수와 매개변수 ----');        
+        
+        let name = "Mike";
+
+        function sayBye(name) {
+            console.log(name)
+        }
+        
+        console.log('--------------- 매개변수 입력 안했을 때');        
+        sayBye(); //undefined
+
+        console.log('--------------- 매개변수 입력 했을 때');        
+        sayBye('jane');
+        console.log(' ');
+
+
+        //or문 활용
+        console.log('---- or문 활용 ----');        
+
+        function sayName(name) {
+            let newName = name || 'friend';
+            let hope = `Hello, ${newName}`
+            console.log(hope);
+        }
+        console.log('--------------- 매개변수 입력 안했을 때');        
+        sayName(); //false
+        
+        console.log('--------------- 매개변수 입력 했을 때');        
+        sayName('Nick'); //true
+        console.log(' ');
+
+        //매개변수 기본 값 설정
+        console.log('---- 매개변수 기본 값 설정 ----');        
+
+        function sayName2(name = 'friend') {
+            let hope = `Hello, ${name}`
+            console.log(hope);
+        }
+        console.log('--------------- 매개변수 입력 안했을 때');        
+        sayName2(); //false
+        console.log('--------------- 매개변수 입력 했을 때');        
+        sayName2('Nick'); //true
+        console.log(' ');
+
+        console.log('---- return 값 반환 ----');
+        function add(num1, num2) {
+            return num1 + num2; //리턴 오른쪽 값 반환
+        }        
+        const result = add(2,3);
+        console.log(result);
+
+        //return이 없어도 undefined 값을 반환함
+        //return 함수 종료 목적으로도 사용
+
+        // --------------------- tip
+        //하나의 함수에 하나의 작업을 작성하고, 쉽고 의도 파악 쉬운 네이밍
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

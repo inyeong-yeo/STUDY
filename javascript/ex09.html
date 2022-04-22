@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch문</title>
+    <script>
+        //switch로 표현되는 것은 if else로 표현 가능함.
+        let fruit = prompt('무슨 과일을 사고 싶나요?');
+        switch(fruit){
+            case '사과' :
+                alert('100원 입니다.');
+                break;
+            case '바나나' :
+                alert('200원 입니다.');
+                break;
+            case '딸기' :
+                alert('300원 입니다.');
+                break;
+            case '키위' :
+                alert('400원 입니다.');
+                break;
+            case '멜론' :
+                alert('500원 입니다.');
+                break;
+                
+            //같은 실행문일 경우 case 작성 후 실행문, break 작성가능
+            case '복숭아' :
+            case '수박' : 
+                alert('1000원 입니다.');
+                break;
+
+            //case에 해당되지 않는 내용    
+            default : 
+                alert('없는 내용입니다.');
+        }
+        //break를 만나기 전까지 실행됨 -> case 뒤 break 필요
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
